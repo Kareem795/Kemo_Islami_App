@@ -16,14 +16,15 @@ class _Splash_screenState extends State<Splash_screen>
   @override
   void initState() 
   {
-    super.initState();
+    super.initState(); // make the splash screen create only once
 
-  Future.delayed(Duration(seconds: 3) , () 
-    {
-      Navigator.pushReplacementNamed(context, Home_screen.route_name);
-      
-    },);
-
+    Future.delayed // make the splash screen visible about 3 seconds and then change to the home screen
+    (
+      Duration(seconds: 3) , () 
+      {
+        Navigator.pushReplacementNamed(context, Home_screen.route_name);
+      },
+    );
   }
 
   @override
@@ -32,8 +33,6 @@ class _Splash_screenState extends State<Splash_screen>
     return Scaffold
     (
       body: Image.asset(App_Assets.splash),
-
     );
   }
-  
 }

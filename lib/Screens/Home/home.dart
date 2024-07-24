@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app_kemo/Utils/app_assets.dart';
 import 'package:islami_app_kemo/Utils/app_colors.dart';
+import 'package:islami_app_kemo/Utils/app_style.dart';
 
 class Home_screen extends StatelessWidget 
 {
@@ -12,18 +13,28 @@ class Home_screen extends StatelessWidget
   {
     return Container
     (
-      decoration: BoxDecoration
+      decoration: const BoxDecoration
       (
-        image: DecorationImage(image: AssetImage(App_Assets.background))
+        image: DecorationImage
+        (
+          image: AssetImage(App_Assets.background)
+        )
 
       ),
+      
       child: Scaffold
       (
         backgroundColor: Colors.transparent,
+        
         appBar: build_Appbar(),
 
-        bottomNavigationBar: Theme(
-          data: ThemeData(canvasColor: App_Colors.primary),
+        bottomNavigationBar: Theme
+        (
+          data: ThemeData
+          (
+            canvasColor: App_Colors.primary
+          ),
+
           child: BottomNavigationBar
           (
             items: 
@@ -34,6 +45,7 @@ class Home_screen extends StatelessWidget
               BottomNavigationBarItem(icon: ImageIcon(AssetImage(App_Assets.icon_Sebha)) , label: " ")
             ],
           ),
+
         ),
       
       
@@ -44,10 +56,14 @@ class Home_screen extends StatelessWidget
 
   AppBar build_Appbar() => AppBar
         (
-          title: Text("Islami"),
+          title: Text
+          (
+            "Islami" ,
+            style: App_Style.AppBar_TextStyle,
+          ),
           centerTitle: true,
-          backgroundColor: Colors.transparent,
-          elevation: 0,
+          backgroundColor: App_Colors.transparent,
+          elevation: 0, // to make the elevation not appearing
         );
 
 
