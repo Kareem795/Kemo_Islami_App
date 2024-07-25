@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget
       routes: 
       {
         Splash_screen.route_name:(_) => const Splash_screen(),
-        Home_screen.route_name:(_) => const Home_screen(),
+        Home_screen.route_name:(_) =>  Home_screen(),
       },
-      initialRoute: Home_screen.route_name
+      initialRoute: Splash_screen.route_name
     );
   }
 }

@@ -20,7 +20,7 @@ class _Splash_screenState extends State<Splash_screen>
 
     Future.delayed // make the splash screen visible about 3 seconds and then change to the home screen
     (
-      Duration(seconds: 3) , () 
+      Duration(seconds: 2) , () 
       {
         Navigator.pushReplacementNamed(context, Home_screen.route_name);
       },
@@ -32,7 +32,11 @@ class _Splash_screenState extends State<Splash_screen>
   {
     return Scaffold
     (
-      body: Image.asset(App_Assets.splash),
+      body: Container
+      (
+        alignment: Alignment.center,
+        child: Image.asset(App_Assets.splash)
+      ),
     );
   }
 }
