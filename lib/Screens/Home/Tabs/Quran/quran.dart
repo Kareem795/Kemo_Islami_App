@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app_kemo/Model/sura_details_args.dart';
+import 'package:islami_app_kemo/Screens/Sura_Details/sura_details.dart';
 import 'package:islami_app_kemo/Utils/app_assets.dart';
 import 'package:islami_app_kemo/Utils/app_colors.dart';
 import 'package:islami_app_kemo/Utils/app_style.dart';
@@ -109,35 +111,51 @@ class Quran_screen extends StatelessWidget
       itemCount: Contants.suraNames.length, // take the number of Sura names and Verses to build the list of Sura names
       itemBuilder: (context , index) // build the Sura names list and Verses list
       {
-        return Row
+        return InkWell
         (
-          children: 
-          [
-            Expanded  // اسماء صور
+          onTap: () 
+          {
+            Navigator.pushNamed
             (
-              flex: 50,
-              child: Text
+              context, 
+              Sura_Details.route_name , 
+              arguments: Sura_Details_Args
               (
-                Contants.suraNames[index],
-                textAlign: TextAlign.center,
-                style: App_Style.title,
+                sura_name: Contants.suraNames[index], 
+                file_name: "${index + 1}.txt"
               )
-            ),
-
-            Expanded // عدد الايات في كل صورة
-            (
-              flex: 50,
-              child: 
-              Text
+            );
+          },
+          child: Row
+          (
+            children: 
+            [
+              Expanded  // اسماء صور
               (
-                Contants.versesNumber[index].toString(),
-                textAlign: TextAlign.center,
-                style: App_Style.title,
-              )
-            )
-            
-          ],
+                flex: 50,
+                child: Text
+                (
+                  Contants.suraNames[index],
+                  textAlign: TextAlign.center,
+                  style: App_Style.title,
+                )
+              ),
           
+              Expanded // عدد الايات في كل صورة
+              (
+                flex: 50,
+                child: 
+                Text
+                (
+                  Contants.versesNumber[index].toString(),
+                  textAlign: TextAlign.center,
+                  style: App_Style.title,
+                )
+              )
+              
+            ],
+            
+          ),
         );
       }
     ),

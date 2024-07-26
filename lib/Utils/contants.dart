@@ -1,5 +1,9 @@
+import 'package:flutter/foundation.dart';
+
 abstract class Contants
 {
+  static const String hadeth_file_path = "assets/files/ahadeth.txt";
+
   static const List<String> suraNames = [
     "الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
     ,"يوسف","الرعد","إبراهيم","الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج","المؤمنون"
