@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app_kemo/Screens/Hadeth_Detils/hadeth_detils.dart';
+import 'package:islami_app_kemo/Screens/Home/Tabs/Sebha/sebha.dart';
 import 'package:islami_app_kemo/Screens/Home/home.dart';
 import 'package:islami_app_kemo/Screens/Splash/splash.dart';
 import 'package:islami_app_kemo/Screens/Sura_Details/sura_details.dart';

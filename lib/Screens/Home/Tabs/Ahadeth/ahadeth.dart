@@ -47,35 +47,33 @@ class _Ahadeth_screenState extends State<Ahadeth_screen>
         Expanded
         (
           flex: 70,
-          child: Stack
+          child: Column
           (
             children: 
             [
-              Column
+              build_divider(),
+          
+              Text
               (
-                children: 
-                [
-                  build_divider(),
-
-                  Text
-                  (
-                    "Hadiths" ,
-                    textAlign: TextAlign.center,
-                    style: App_Style.title,
-                  ),
-
-                  build_divider(),
-
-                  build_ahadeth_list(),
-
-                ],
+                "Hadiths" ,
+                textAlign: TextAlign.center,
+                style: App_Style.title,
               ),
-            ]
+          
+              build_divider(),
+          
+              build_ahadeth_list(),
+          
+            ],
           ),
         )
       ],
     );
   }
+
+  //-------------------Important-----------------//
+
+  // Note: Study it is important
 
   Future read_ahadeth_file() async 
   {
@@ -89,11 +87,13 @@ class _Ahadeth_screenState extends State<Ahadeth_screen>
       hadeth_lines.removeAt(0);
       String hadeth_contant = hadeth_lines.join();
       hadeth_list.add(Hadeth(title: hadeth_name.trim(), contant: hadeth_contant));
-      print("---------------------------------");
+      
     }
     setState(() {});
 
   }
+
+  //-------------------Important-----------------//
 
   Expanded build_ahadeth_list() => Expanded
   (
@@ -103,7 +103,7 @@ class _Ahadeth_screenState extends State<Ahadeth_screen>
       itemCount: hadeth_list.length, 
       itemBuilder: (context , index)
       {
-        return InkWell
+        return InkWell // we use it to make name of ahadeth to be clickable
         (
           onTap: () 
           {
@@ -115,21 +115,15 @@ class _Ahadeth_screenState extends State<Ahadeth_screen>
             );
           },
           
-          child: Row
+          child: Expanded  // اسماء الاحاديث
           (
-            children: 
-            [
-              Expanded  // اسماء الاحاديث
-              (
-                flex: 50,
-                child: Text
-                (
-                  hadeth_list[index].title,
-                  textAlign: TextAlign.center,
-                  style: App_Style.title,
-                )
-              ),
-            ],
+            flex: 50,
+            child: Text
+            (
+              hadeth_list[index].title,
+              textAlign: TextAlign.center,
+              style: App_Style.title,
+            )
           ),
         );
       }

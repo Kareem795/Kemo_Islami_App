@@ -30,7 +30,7 @@ class Quran_screen extends StatelessWidget
         Expanded
         (
           flex: 70,
-          child: Stack
+          child: Stack // we use stack to make the VerticalDivider to be under the 2 horizontal line and the two title 
           (
             alignment: Alignment.center, // we use it to make the vertical line in the the center
             children: 

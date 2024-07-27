@@ -7,7 +7,8 @@ import 'package:islami_app_kemo/Utils/app_colors.dart';
 import 'package:islami_app_kemo/Utils/app_style.dart';
 import 'package:islami_app_kemo/Wedgits/app_scaffold.dart';
 
-class Sura_Details extends StatefulWidget {
+class Sura_Details extends StatefulWidget 
+{
   Sura_Details({super.key});
   static const String route_name = "sura_details";
 
@@ -15,7 +16,8 @@ class Sura_Details extends StatefulWidget {
   State<Sura_Details> createState() => _Sura_DetailsState();
 }
 
-class _Sura_DetailsState extends State<Sura_Details> {
+class _Sura_DetailsState extends State<Sura_Details> 
+{
   late Sura_Details_Args args;
 
   String file_contants = "";
@@ -37,34 +39,7 @@ class _Sura_DetailsState extends State<Sura_Details> {
       
       // CircularProgressIndicator() => اذا تاخرت تحميل ايات الصورة تظهر علامة التحميل الدائرية
 
-      //-------------Clasic----------//
-
-      // body: if(file_contants.isEmpty)
-      // {
-      //   Center(child: CircularProgressIndicator(color: App_Colors.primary,))
-      // }else
-      // {
-      //   Text(file_contants , textDirection:TextDirection.rtl,)
-      // },
-
-      //-----------------------------//
-
     );
-    
-    //-------------Shape of scaffold befor App_Scaffold------//
-
-    // return Scaffold
-    // (
-    //   appBar: AppBar
-    //   (
-    //     title: Text('Surah ${args.sura_name}',),
-    //   ),
-
-    //   body: Text(file_contants , textDirection:TextDirection.rtl,),
-      
-    // );
-
-    //-------------------------------------------------------//
 
 
   }
@@ -86,11 +61,13 @@ class _Sura_DetailsState extends State<Sura_Details> {
       width: MediaQuery.of(context).size.width * 0.8,
       height: MediaQuery.of(context).size.height * 0.8,
       padding: EdgeInsets.all(20),
+
       decoration: BoxDecoration
       (
         color: App_Colors.white,
         borderRadius: BorderRadius.circular(25),
       ),
+      
       child: SingleChildScrollView
       (
         child: Text

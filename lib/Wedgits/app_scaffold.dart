@@ -13,6 +13,8 @@ class App_Scaffold extends StatelessWidget
 
   const App_Scaffold({super.key , this.body, this.appBar_title, this.bottomNavigationBar});
 
+  // if you did not enter any of the parameters they will get the default
+
   @override
   Widget build(BuildContext context) 
   {

@@ -18,7 +18,7 @@ class _Splash_screenState extends State<Splash_screen>
   {
     super.initState(); // make the splash screen create only once
 
-    Future.delayed // make the splash screen visible about 3 seconds and then change to the home screen
+    Future.delayed // make the splash screen visible about 2 seconds and then change to the home screen
     (
       Duration(seconds: 2) , () 
       {
