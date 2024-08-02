@@ -11,4 +11,8 @@ abstract class App_Assets
   static const String Ahdath_Tab_Log = "${default_path}ahdath_tab_log.png";
   static const String Sebha_body = "${default_path}body_sebha_light_logo.png";
   static const String Sebha_head = "${default_path}head_sebha_light.png";
+  static const String Radio_Tab_Log = "${default_path}radio_tab_log.png";
+  static const String Radio_next = "${default_path}Icon metro-next .png";
+  static const String Radio_previous = "${default_path}Icon metro-previous.png";
+  static const String Radio_play = "${default_path}Icon awesome-play.png";
 }

@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 abstract class Contants
 {
   static const String hadeth_file_path = "assets/files/ahadeth.txt";
