@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islami_app_kemo/Screens/Hadeth_Detils/hadeth_detils.dart';
 import 'package:islami_app_kemo/Screens/Home/home.dart';
 import 'package:islami_app_kemo/Screens/Splash/splash.dart';
@@ -19,6 +20,28 @@ class MyApp extends StatelessWidget
   {
     return MaterialApp
     (
+
+      //----------------------------------------------------------------
+
+      // Some addition to make our application support arabic and english
+
+      localizationsDelegates: 
+      [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+
+      supportedLocales: 
+      [
+        Locale("ar"),
+        Locale("en"),
+      ],
+
+      locale: Locale("ar"), 
+
+  //----------------------------------------------------------------
+  
       routes: 
       {
         Splash_screen.route_name:(_) => const Splash_screen(),
@@ -27,6 +50,7 @@ class MyApp extends StatelessWidget
         hadeth_Details.route_name:(_) => hadeth_Details(),
       },
       initialRoute: Splash_screen.route_name
+      
     );
   }
 }

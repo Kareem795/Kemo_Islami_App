@@ -3,6 +3,7 @@ import 'package:islami_app_kemo/Screens/Home/Tabs/Ahadeth/ahadeth.dart';
 import 'package:islami_app_kemo/Screens/Home/Tabs/Quran/quran.dart';
 import 'package:islami_app_kemo/Screens/Home/Tabs/Radio/radio.dart';
 import 'package:islami_app_kemo/Screens/Home/Tabs/Sebha/sebha.dart';
+import 'package:islami_app_kemo/Screens/Home/Tabs/Setting/setting.dart';
 import 'package:islami_app_kemo/Utils/app_assets.dart';
 import 'package:islami_app_kemo/Utils/app_colors.dart';
 import 'package:islami_app_kemo/Wedgits/app_scaffold.dart';
@@ -18,8 +19,9 @@ class Home_screen extends StatefulWidget
 
 class _Home_screenState extends State<Home_screen> 
 {
-  int selcted_tab_index = 0; // variable to store the index of the selected tab
-  List<Widget> tabs = [Quran_screen() , Ahadeth_screen() , My_Radio_screen() , Sebha_screen()];
+  int selcted_tab_index = 4; // variable to store the index of the selected tab
+
+  List<Widget> tabs = [Quran_screen() , Ahadeth_screen() , My_Radio_screen() , Sebha_screen() , Setting()];
 
   @override
   Widget build(BuildContext context) 
@@ -60,7 +62,8 @@ class _Home_screenState extends State<Home_screen>
             BottomNavigationBarItem(icon: ImageIcon(AssetImage(App_Assets.icon_Quran)) , label: "Moshaf"),
             BottomNavigationBarItem(icon: ImageIcon(AssetImage(App_Assets.icon_Ahdath)), label: "Hadiths"),
             BottomNavigationBarItem(icon: ImageIcon(AssetImage(App_Assets.icon_Radio)) , label: "Radio"),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage(App_Assets.icon_Sebha)) , label: "Tasbih")
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage(App_Assets.icon_Sebha)) , label: "Tasbih"),
+            BottomNavigationBarItem(icon: Icon(Icons.settings) , label: "Settings"),
           ],
         )
 
